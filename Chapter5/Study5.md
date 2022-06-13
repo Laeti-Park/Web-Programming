@@ -20,7 +20,8 @@
 ```
 ![](../Img/study5_2.png)
 
-### display
+### CSS3 위치 설정
+
 - display : 태그를 박스로 지정
 - block(블록 박스)
   - 항상 새 라인에서 시작
@@ -60,7 +61,6 @@ div div {
 ```
 ![](../Img/study5_3.png)
 
-### position
 - 웹 페이지에 나타난 순서대로 HTML 태그 배치하는 방식인 normal flow를 position을 이용해 무시할 수 있음
 - static
   - 정적 배치(디폴트값)
@@ -78,14 +78,13 @@ div div {
 
 ![](../Img/study5_4.png)
 
-### CSS3 꾸미기
-
 - z-index : z축 우선 순위 지정
 
 ```CSS
 #spadeA { z-index : -3; left : 10px; top : 20px; }
 #spade2 { z-index : 2; left : 40px; top : 30px; }
 ```
+### CSS3 텍스트 설정
 
 ![](../Img/study5_5.png)
 
@@ -101,7 +100,6 @@ span {
   - hidden : 박스를 넘어가면 내용 숨기기
   - visible : 박스를 넘어가서도 내용 출력
   - scroll : 박스에 스크롤바 생성
-
 
 - list-style-type : 아이템 마커 타입 지정
   - none, disc(●), circle(○), square(■), decimal(1)
@@ -120,4 +118,94 @@ ul {
 
 - list-style : 위 3개 모두 지정
 
+### CSS3 표 설정
 
+- border : 표 테두리 설정
+- border-collapse : collapse; : 중복된 테두리 합치기
+- width, height으로 셀 크기를 제어할 수 있음
+- padding : 여백 설정
+- text-align : 정렬 설정(left, center, right)
+- background : 배경색 설정
+- color : 표 텍스트 색 설정
+- border-bottom : 테두리 설정
+
+```CSS
+thead { /* <thead>의 모든 셀 적용 */
+  background : darkgray;
+  color : yellow;
+}
+td, tfoot th { /* 아래쪽 테두리만 회색 */
+  border-bottom : 1px solid gray
+}
+```
+
+- tbody tr:nth-child(even) : <tbody>에 있는 짝수 <tr>에 표 꾸미기
+
+ ### CSS3 폼 설정
+ - input[type=text]
+   - color : 폼 요소 글자 색 지정
+   - border : 폼 요소 테두리 만들기
+     - border-radius : 테두리 모서리 설정
+   - :hover : 마우스 올라올 때 설정
+   - :focus : 포커스를 받을 때 설정
+
+### CSS3 동적 변화 설정
+
+- CSS3로만 HTML 태그 모양의 동적 변화 가능
+- 애니메이션
+  - @keyframes으로 HTML 태그의 시간별 모양 변화 만들기
+
+```CSS
+ /* @keyframes으로 HTML 태그의 시간별 모양 변화 만들기 */
+@keyframes textColorAnimation {
+  0% { color : blue; } /* 시작 시. 0% 대신 from 사용 가능 */
+  30% { color : green; }
+  100% { color : red; } /* 끝까지. 100% 대신 to 사용 가능 */
+}
+
+/* 애니메이션 스타일 시트 */
+span {
+animation-name : textColorAnimation; 
+animation-duration : 5s; /* 애니메이션 1회 지속 시간 */
+animation-iteration-count : infinite; /* 무한 반복 */
+}
+```
+
+### 전환
+
+- HTML 태그에 적용된 CSS3 프로퍼티 값의 변화를 서서히 진행시
+켜 애니메이션 효과 생성
+- HTML 태그의 색이나 모양, 위치 등이 서서히 변하는 효과
+- transition을 이용해 전환 설정
+
+```CSS
+span {
+  transition : font-size 5s;
+} 
+span:hover {
+  font-size : 500%;
+}
+```
+
+### 변환
+-  텍스트나 이미지를 회전, 확대 다양한 기하학적인 모양
+으로 출력
+  - 회전 각도의 단위는 deg이며 시계방향의 회전
+  -  텍스트나 이미지를 회전, 확대 다양한 기하학적인 모양으로 출력
+-  transform을 이용해 변환 설정
+   - translate(x,y) : x축, y축만큼 이동
+   - translateX(n) : x축으로 n만큼 이동
+   - translateY(n) : y축으로 n만큼 이동
+  - scale(w,h) : 폭과 높이를 w, h배만큼 조절, 0으로 설정할 경우 보이지 않음
+  - scaleX(n) : 폭을 n배만큼 조절
+  - scaleY(n) : 높이를 n배만큼 조절
+  - rotate(angle) : angle 각도만큼 시계 방향 회전
+  - skew(x-angle, y-angle) : x축과 y축을 기준으로 x-angle, y-angle 각도만큼 기울임
+  - skewX(angle) : x축을 기준으로 angle 각도만큼 기울임
+  - skewY(angle) : y축을 기준으로 angle 각도만큼 기울임
+
+```CSS
+div {
+  transform : rotate (20deg); /* # 20도 회전 */
+}
+```
