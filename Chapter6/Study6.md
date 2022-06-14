@@ -24,7 +24,7 @@ onmouseout = "this.src='media/apple.png'" // 마우스가 이미지에서 나올
 ```
 2. <script></script> 태그에 작성
 
-```HTML, JavaScript
+```JavaScript
 <script>
     function over(obj) {
         obj.src = "media/banana.png";
@@ -39,13 +39,13 @@ onmouseout = "this.src='media/apple.png'" // 마우스가 이미지에서 나올
 </body>
 
 ```
-3. JavaScript 파일에 작성
-```HTML, JavaScript
+1. JavaScript 파일에 작성
+```HTML
 <script src=“파일이름.js”> // HTML5부터 이곳에 자바스크립트 코드 추가 작성하면 안 됨
 </script>
 
 ```
-4. URL 부분에 작성
+1. URL 부분에 작성
 ```HTML
 <a href="javascript:alert('클릭하셨어요?')">
 ```
@@ -252,6 +252,3 @@ function adder(a, b) {
 "use strict"; // 엄격 모드 활성화
 age = 22; //Uncaught ReferenceError: age is not defined
 ```
-
-
-
