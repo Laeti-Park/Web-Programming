@@ -59,22 +59,25 @@ div div {
     display : inline-block;
 }
 ```
+
+- none : 적용된 태그는 공간 자체도 없어짐
+```CSS
+img {
+    display : none;
+}
+```
 ![](../Img/study5_3.png)
 
-- 웹 페이지에 나타난 순서대로 HTML 태그 배치하는 방식인 normal flow를 position을 이용해 무시할 수 있음
-- static
-  - 정적 배치(디폴트값)
-- relative
-  - 상대 배치, 상대 배치에 따라 위치 지정
-- absolute
-  - 절대 배치, 절대적인 위치 지정
-- fixed
-  - 고정 배치, 브라우저 크기까지 고려해 위치 지정
-- float
-  - 유동 배치, 브라우저 크기까지 고려해 위치 지정
-  - float : left, float : right가 있음
-- position 프로퍼티를 사용할 경우, 태그의 위치와 크기
-  - top, bottom, left, right, width, height  
+- 배치
+  - 웹 페이지에 나타난 순서대로 HTML 태그 배치하는 방식인 normal flow를 position을 이용해 무시할 수 있음
+  - static : 정적 배치(디폴트값)
+  - relative : 상대 배치, 상대 배치에 따라 위치 지정
+  - absolute : 절대 배치, 절대적인 위치 지정
+  - fixed : 고정 배치, 브라우저 크기까지 고려해 위치 지정
+  - float : 유동 배치, 브라우저 크기까지 고려해 위치 지정
+    - float : left, float : right가 있음
+  - position 프로퍼티를 사용할 경우, 태그의 위치와 크기
+    - top, bottom, left, right, width, height  
 
 ![](../Img/study5_4.png)
 
@@ -139,15 +142,19 @@ td, tfoot th { /* 아래쪽 테두리만 회색 */
 }
 ```
 
-- tbody tr:nth-child(even) : <tbody>에 있는 짝수 <tr>에 표 꾸미기
+- tbody tr:nth-child(even) : \<tbody>에 있는 짝수 \<tr>에 표 꾸미기
 
  ### CSS3 폼 설정
- - input[type=text]
+ - input[type=타입]
    - color : 폼 요소 글자 색 지정
    - border : 폼 요소 테두리 만들기
      - border-radius : 테두리 모서리 설정
    - :hover : 마우스 올라올 때 설정
    - :focus : 포커스를 받을 때 설정
+
+```CSS
+input[type=button]:hover { background : yellow }
+```
 
 ### CSS3 동적 변화 설정
 
