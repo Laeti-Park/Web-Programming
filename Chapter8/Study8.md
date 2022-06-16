@@ -1,12 +1,10 @@
 ## HTML DOM 객체
--  웹 페이지에 작성된 HTML 태그 당 객체 생성
--  HTML 태그가 출력된 모양이나 콘텐츠를 제어하기 위함
+-  웹 페이지에 작성된 HTML 태그의 요소를 객체화 한 것
 
 - DOM 트리
-  - HTML 태그의 포함관계에 따라 DOM 객체의 트리(tree) 생성
-  - DOM 트리는 부모 자식 관계
+  - HTML 태그의 포함관계에 따라 DOM 객체의 트리(tree)가 생성되며, JavaScript는 DOM 트리를 통해 DOM 객체에 접근할 수 있음
+  - HTML 태그 당 DOM 객체가 하나씩 생성
   - DOM 트리 루트는 document 객체
-  - DOM 객체는 HTML 태그 종류만큼 존재
 
 - 브라우저가 HTML 태그를 화면에 그리는 과정
 1. 브라우저가 DOM 트리의 틀(document 객체) 생성
@@ -22,7 +20,7 @@
 - 이벤트 리스너
 - 콘텐츠(innerHTML)
 
-### HTML DOM 객체 구성 요소
+### DOM 객체 구성 요소
 - 프로퍼티(property) : HTML 태그의 속성(attribute)
 - 메소드(method) : DOM 객체의 멤버 함수로서, HTML 태그 제어
 - 컬렉션(collection) : 자식 DOM 객체들의 주소를 가지는 등 배열과 비슷한 집합적 정보
@@ -67,8 +65,8 @@ onclick="this.style.color='teal'">
     p.innerHTML= "나의 <img src='puppy.png'> 강아지";
   }
 </script>
-
-<p id="firstP" style="color:blue" onclick="change()"> <!-- 클릭 시 innerHTML 내용이("여기에<span style="color:red">클릭하세요</span>") change() 내용처럼 변경 -->
+<!-- 클릭 시 innerHTML 내용이("여기에<span style="color:red">클릭하세요</span>") change() 내용처럼 변경 -->
+<p id="firstP" style="color:blue" onclick="change()">
 여기에<span style="color:red">클릭하세요</span>
 </p>
 ```
@@ -76,19 +74,18 @@ onclick="this.style.color='teal'">
 - this : 객체 자신
 
 ```HTML
-<!-- <div> 태그 자신의 배경을 orange 색으로 변경
- -->
+<!-- <div> 태그 자신의 배경을 orange 색으로 변경 -->
 <div onclick="this.style.backgroundColor='orange'">
 ```
 
 - document 객체 : HTML 문서 전체
-  - HTML 문서 전체를 대변하는 객체로 DOM 객체 접근 경로의 시작점
+  - HTML 문서 전체를 대변하는 객체로 DOM 객체 접근 경로의 시작점, DOM 트리의 최상위 객체
   - DOM 트리에서 DOM 객체 찾기
     - document.getElementsByTagName() : 태그 이름으로 찾기
+    - document.getElementsByClassName() : class 속성으로 찾기
 ```JavaScript
 var divTags = document.getElementsByTagName("div");
 ```
-    - document.getElementsByClassName() : class 속성으로 찾기
 ```JavaScript
 var plainClasses = document.getElementsByClassName("plain");
 var n = plainClasses.length;
