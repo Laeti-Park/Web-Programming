@@ -135,7 +135,7 @@ var score;
 var year, month, day;
 var address = "서울시"; // 서울시로 초기화
 
-// let 키워드로 변수 선언
+// let  키워드로 변수 선언
 let name = "KDH";
 let name = "JAVA";
 

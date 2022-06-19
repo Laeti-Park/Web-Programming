@@ -93,7 +93,7 @@ p {
 > 답 : input[type=button]:hover { background : yellow }
 
 - 웹 페이지내 \<input type="button"> 버튼에 대해, 마우스로 클릭하면 배경색을 노란색으로 칠한다. 그 후 사용자가 마우스로 다른 곳을 클릭하면 원래대로 돌아온다.
-> 답 : input[type=button]:focus { color : yellow }
+> 답 : input[type=button]:focus { background : yellow }
 
 ### 9. 다음 전환(transition)이 일어나도록 CSS3 스타일 시트를 작성하라.
 

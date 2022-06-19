@@ -71,7 +71,7 @@ img {
 - 배치
   - 웹 페이지에 나타난 순서대로 HTML 태그 배치하는 방식인 normal flow를 position을 이용해 무시할 수 있음
   - static : 정적 배치(디폴트값)
-  - relative : 상대 배치, 상대 배치에 따라 위치 지정
+  - relative : 상대 배치, 상대 태그에 따라 위치 지정
   - absolute : 절대 배치, 절대적인 위치 지정
   - fixed : 고정 배치, 브라우저 크기까지 고려해 위치 지정
   - float : 유동 배치, 브라우저 크기까지 고려해 위치 지정
@@ -172,9 +172,9 @@ input[type=button]:hover { background : yellow }
 
 /* 애니메이션 스타일 시트 */
 span {
-animation-name : textColorAnimation; 
-animation-duration : 5s; /* 애니메이션 1회 지속 시간 */
-animation-iteration-count : infinite; /* 무한 반복 */
+  animation-name : textColorAnimation; 
+  animation-duration : 5s; /* 애니메이션 1회 지속 시간 */
+  animation-iteration-count : infinite; /* 무한 반복 */
 }
 ```
 
@@ -203,13 +203,13 @@ span:hover {
    - translate(x,y) : x축, y축만큼 이동
    - translateX(n) : x축으로 n만큼 이동
    - translateY(n) : y축으로 n만큼 이동
-  - scale(w,h) : 폭과 높이를 w, h배만큼 조절, 0으로 설정할 경우 보이지 않음
-  - scaleX(n) : 폭을 n배만큼 조절
-  - scaleY(n) : 높이를 n배만큼 조절
-  - rotate(angle) : angle 각도만큼 시계 방향 회전
-  - skew(x-angle, y-angle) : x축과 y축을 기준으로 x-angle, y-angle 각도만큼 기울임
-  - skewX(angle) : x축을 기준으로 angle 각도만큼 기울임
-  - skewY(angle) : y축을 기준으로 angle 각도만큼 기울임
+   - scale(w,h) : 폭과 높이를 w, h배만큼 조절, 0으로 설정할 경우 보이지 않음
+   - scaleX(n) : 폭을 n배만큼 조절
+   - scaleY(n) : 높이를 n배만큼 조절
+   - rotate(angle) : angle 각도만큼 시계 방향 회전(deg)
+   - skew(x-angle, y-angle) : x축과 y축을 기준으로 x-angle, y-angle 각도만큼 기울임(deg)
+   - skewX(angle) : x축을 기준으로 angle 각도만큼 기울임(deg)
+   - skewY(angle) : y축을 기준으로 angle 각도만큼 기울임(deg)
 
 ```CSS
 div {
