@@ -17,12 +17,12 @@
 ### 3. 다음 배열에 대한 설명 중 틀린 것은?
 
 ```JavaScript
-let month = new Array("Jan", "Feb", "March");
+let months = new Array("Jan", "Feb", "March");
 ```
 
 1. let months = ["Jan", "Feb", "March"]; 로 대신할 수 있다.
-2. months. length는 3이다.
-3. months [1] = "February"; 코드는 "Feb"을 "February"로 수정한다.
+2. months.length는 3이다.
+3. months[1] = "February"; 코드는 "Feb"을 "February"로 수정한다.
 4. months.length = 5로 지정하여 배열의 크기를 5개로 늘릴 수 없다.
 
 > 답 : 4  
@@ -45,7 +45,7 @@ let grades = new Array("A", "B", "C", "D");
 ### 5. 주석에 맞게 다음 빈 칸에 자바스크립트 코드로 채워라.
 
 > 답 :  
-> money = new Array(2)  
+> money = new Array(3)  
 > money[0]  
 > money[1]  
 > money[2]  
@@ -53,9 +53,9 @@ let grades = new Array("A", "B", "C", "D");
 > sum/money.length  
 
 ```JavaScript
-let money = new Array(2) // Array를 이용하여 크기가 3인 배열 money 생성
+let money = new Array(3) // Array를 이용하여 크기가 3인 배열 money 생성
 money[0] = 5; // money의 첫 번째 원소에 5 삽입
-money[1] = 5; // money의 두 번째 원소에 7 삽입
+money[1] = 7; // money의 두 번째 원소에 7 삽입
 money[2] = -3; // money의 세 번째 원소에 -3 삽입
 let sum = 0;
 for (let i = 0; i < money.length; i++) sum += money[i]; // 배열 합 구하기

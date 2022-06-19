@@ -25,6 +25,7 @@ var today = new Date(); // 시간 정보를 다루는 Date 타입의 객체 생�
 var msg = new String(“Hello”); // “Hello” 문자열을 담은 String 타입의 객체 생성
 ```
 ### Array 객체
+- Array 객체는 여러 타입의 데이터가 섞여 저장될 수 있음
 - []로 배열 만들기
   - 배열 크기는 고정되지 않음, 인덱스+1로 접근해 배열 크기 늘릴 수 있음
   - 마지막 원소 추가 시 늘어남
@@ -121,8 +122,8 @@ var account = {
       this.balance += money;
     },
     withdraw: function (money) {
-        this.balance -= money;
-        return money;
+      this.balance -= money;
+      return money;
     }
 };
 ```

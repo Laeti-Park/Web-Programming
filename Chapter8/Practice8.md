@@ -43,7 +43,7 @@ let obj = document.getElementById("myDiv");
 > 답 : 2  
 > obj.style.backgroundColor = "red";
 
-### 6. 다음 중 docuinent 개체의 메소드 이름이 잘못된 것은?
+### 6. 다음 중 document 개체의 메소드 이름이 잘못된 것은?
 1. getElementById() 
 2. getElementByTagName()
 3. writeln() 
@@ -78,7 +78,26 @@ let obj = document.getElementById("myDiv");
 
 - 라인 7을 \<ol type="A" onclick="alert(this.innerHTML)">로 수정하여 웹 페이지를 출력하고 라인 8이나 10의 위치에 클릭하면 무엇이 출력되는가?
 
-> 답 : ![](../Img/Practice8_1.png)
+```HTML
+<!DOCTYPE html>
+<html>
+    <head> <meta charset="UTF-8">
+        <title>라면을 끓이는 순서</title>
+    </head>
+    <body>
+        <h3>라면을 끓이는 순서</h3>
+        <hr>
+        <ol type="A" onclick="alert(this.innerHTML)">
+            <li>물을 끓인다.</li>
+            <li onclick="alert(this.innerHTML)"><span>라면</span>과 스프를 넣는다.</li>
+            <li>5분 후 먹는다.</li>
+        </ol>
+    </body>
+</html>  
+```
+
+> 답 : ![](../Img/Practice8_1.png)  
+> \<li>물을 끓인다.\</li>, \<li>5분 후 먹는다.\</li> 클릭 시 화면
 
 ### 8. 다음 위 페이지를 로드하면 경고창이 출력되는가? 답에 대한 이유를 설명하라. 
 
