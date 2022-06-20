@@ -78,7 +78,14 @@ img {
     - float : left, float : right가 있음
   - position 프로퍼티를 사용할 경우, 태그의 위치와 크기
     - top, bottom, left, right, width, height  
-
+```CSS
+#down:hover {
+    position: relative;
+    left: 20px;
+    top: 20px;
+    background: green;
+}
+```
 ![](../Img/study5_4.png)
 
 - z-index : z축 우선 순위 지정

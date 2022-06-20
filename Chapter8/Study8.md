@@ -101,7 +101,7 @@ var n = plainClasses.length;
 var newDIV = document.createElement("div");
 newDIV.innerHTML = "새로 생성된 DIV입니다."; 
 newDIV.setAttribute("id", "myDiv");
-newDIV.style.backgroundColor = "yellow"
+newDIV.style.backgroundColor = "yellow";
 ```
 
 ```HTML

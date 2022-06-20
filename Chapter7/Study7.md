@@ -42,8 +42,8 @@ var week = new Array("월", "화", "수", "목", "금", "토", "일");
 - 인덱스(변수명[])를 이용해 배열의 각 원소 접근
 
 ```JavaScript
-var week = ["월", "화", "수", "목", "금", "토", "일"];
-var plots = [-20, -5, 0, 15, 20];
+var name = cities[0];
+cities[1] = “Gainesville”; 
 ```
 
 - length : 배열의 크기 확인
@@ -94,6 +94,17 @@ var n = Math.floor(m); // m에서 소수점 이하를 제거한 정수
 - new Object() 이용
 
 ```JavaScript
+function inquiry() { 
+  return this.balance;
+}
+function deposit(money) {
+  this.balance += money;
+}
+function withdraw(money) {
+  this.balance -= money; 
+  return money;
+}
+
 // 사용자 객체 만들기
 var account = new Object(); 
 account.owner = "황기태"; // 계좌 주인 프로퍼티 생성 및 초기화
