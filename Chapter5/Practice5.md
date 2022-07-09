@@ -98,10 +98,10 @@ p {
 ### 9. 다음 전환(transition)이 일어나도록 CSS3 스타일 시트를 작성하라.
 
 - \<span> 태그의 텍스트 크기를 지정하는 font-size 프로퍼티가 변경되면 2초에 걸쳐 천천히 텍스트의 크기가 변한다.
-> 답 : span { transition : font-size 2s; }
+> 답 : span { transition : font-size 2s }
 
 - \<img> 태그의 폭을 지정하는 width 프로퍼티가 변경되면, 3초에 걸쳐 천천히 이미지 폭이 변한다.
-> 답 : img { transition : width 3s; }
+> 답 : img { transition : width 3s }
 
 ### 10. 다음과 같은 HTML 태그와 출력된 모양이 있다. 스폰지밥 이미지에 마우스를 올렸을 때 주어진 문항과 같이 변환되도록 transform 프로퍼티 등을 이용하여 \<style> 태그 안에 들어가 시트를 완성하라.
 

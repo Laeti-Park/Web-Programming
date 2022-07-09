@@ -86,7 +86,7 @@ let text = "Web Programming";
 > 답 : 2
 
 - let x = text.replace("Web", "HTML5");
-> 답 : HTML5 Programming
+> 답 : "HTML5 Programming"
 
 - let x = text.charAt(4); 
 > 답 : "P"
@@ -94,7 +94,7 @@ let text = "Web Programming";
 ### 8. 1부터 10 사이(10 프함) 임의의 정수를 리턴하는 자바스크립트 코드를 let x = Math.random()*10+1;로 작성하면 안 되는 이유를 설명하고, 바르게 수정하라.
 
 > 이유 : 실수 값으로 리턴되기 때문에 floor를 사용함
-> 답 : x = Math.floor(x);
+> 답 : let x = Math.floor(Math.random()*10+1);
 
 ### 9. student 객체를 생성하는 다음 코드를 리터럴 표기 방식으로 다시 작성하라.
 

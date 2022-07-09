@@ -84,8 +84,8 @@ let t = 1 + "hello" + 2 + 3;
 ```
 ```
 답 : 
-3hello3
-1hello23
+s = 3hello3
+t = 1hello23
 ```
 
 ```JavaScript
@@ -94,8 +94,8 @@ let t = ("아버지" > "어머니");
 ```
 ```
 답 :
-false
-false
+s = false
+t = false
 ```
 
 ### 9. 다음 코드에서 지역 변수와 블록 변수 그리고 전역 변수를 찾아 나열하라.
@@ -203,7 +203,9 @@ document.write("합 = " + sum)
 </html>
 ```
 > 답 :
-![](../Img/Practice6_2.png)
+![](../Img/Practice6_2.png)  
+> print() 함수가 호출되고 있지 
+않기 때문
 
 ### 13. 다음과 같이 변수 a, b가 선언되어 있을 때, 각 계산 후 a, b값은 무엇인가?
 

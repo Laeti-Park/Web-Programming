@@ -27,6 +27,10 @@
 ### 4. 브라우저가 HTML DOM 트리를 만드는 목적은 무엇인가?
 
 > 답 : JavaScript에서 DOM 객체에 접근하기 위함
+> HTML DOM 트리를 만드는 이유는 HTML 문서의 각 요소를 객체화하고 이 객체들을 계층관계로 연결하
+여 유지함으로써, HTML 페이지가 로드된 이후 자바스크립트 코드로 HTML 태그 요소를 접근하고 동
+적인 변화를 줄 수 있도록 하기 위해서이다. 또한 HTML 페이지가 이미 로드된 이후에도 DOM 트리에 
+새로운 HTML 요소를 삽입하거나 삭제하여 출력된 웹 페이지의 모양을 제어하기 위해서이다. 
 
 ### 5. 다음은 웹 페이지에 작성된 \<div id="myADiv">...\</div> 태그를 찾는 자바스크립트 코드이다.
 
@@ -117,6 +121,12 @@ let obj = document.getElementById("myDiv");
     </body>
 </html>
 ```
+
+> 답 : alert() 함수가 실행되고 경고창이 출력된다. 그 이유는 HTML 문서가 로딩되는 초기에 <script>
+내의 let elem = document.getElementById("myBody");코드가 실행된다, 하지만 아직 브라우저
+는 <body>...</body> 태그를 읽지 못한 상태이며 따라서 body 객체가 생성되지 않았다. 그러므로 
+document.getElementById("myBody") 메소드가 null을 리턴하여 if(elem == null)의 조건문이 
+true가 되고 alert() 함수가 실행된다.
 
 ### 9. HTML 페이지에 다음 태그가 작성되어 있을 때
 
